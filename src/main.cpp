@@ -1,37 +1,20 @@
 #include <iostream>
 using namespace std;
 
-string coordinateGrid[11][11];
 char coordinateGrid[11][11];
 int mapSize = 10;
+int lx = 5;
+int ly = 5;
+int currentPosX = 0;
+int currentPosY = 0;
 
-void createGrid() {
-    for(int x = 0; x <= 10; ++x) {
-        for(int y = 0; y <= 10; ++y) {
-void createGrid(int mx = 404, int my = 404) {
-
-            coordinateGrid[x][y] = " x ";
-            coordinateGrid[x][y] = "x";
-            cout << coordinateGrid[x][y];
-    int lx = 5;
-    int ly = 5;
-
-    if(mx && my == 404) {
-        goto firstSkip;
-    }
-    if(mx != 404) {
-        lx + mx;
-    }
-    if(my != 404) {
-        ly + my;
-    }
-
-    firstSkip:
+void createGrid(int mx = 0, int my = 0) {
+    currentPosX = currentPosX + mx;
+    currentPosY = currentPosY + my;
     for(int x = 0; x <= mapSize; ++x) {
         for(int y = 0; y <= mapSize; ++y) {
-
             coordinateGrid[x][y] = 'x';
-            coordinateGrid[lx][ly] = 'O';
+            coordinateGrid[ly + currentPosY][lx + currentPosX] = 'O';
             cout << ' ' << coordinateGrid[x][y] << ' ';
             if(y == 10) {
                 cout << "\n";
@@ -45,9 +28,16 @@ void createGrid(int mx = 404, int my = 404) {
 int main() {
     createGrid();
     while(true) {
-        createGrid(1, 404);
         cout << "\n" << "Type direction to move" << "\n" << ">";
-        string penis;
-        cin >> penis;
+        string movement;
+        cin >> movement;
+        int h = 0;
+        int v = 0;
+        if(movement == "up"){v = -1;}
+        if(movement == "down"){v = 1;}
+        if(movement == "left"){h = -1;}
+        if(movement == "right"){h = 1;}
+        system("cls");
+        createGrid(h, v);
     }
 }
