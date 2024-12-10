@@ -2,6 +2,7 @@
 using namespace std;
 
 string coordinateGrid[11][11];
+char coordinateGrid[11][11];
 
 void createGrid() {
     for(int x = 0; x <= 10; ++x) {
