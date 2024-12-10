@@ -9,6 +9,7 @@ void createGrid() {
         for(int y = 0; y <= 10; ++y) {
 
             coordinateGrid[x][y] = " x ";
+            coordinateGrid[x][y] = "x";
             cout << coordinateGrid[x][y];
             if(y == 10) {
                 cout << "\n";
