@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 char coordinateGrid[11][11];
@@ -13,7 +14,7 @@ void createGrid(int mx = 0, int my = 0) {
     currentPosY = currentPosY + my;
     for(int x = 0; x <= mapSize; ++x) {
         for(int y = 0; y <= mapSize; ++y) {
-            coordinateGrid[x][y] = 'x';
+            coordinateGrid[x][y] = '.';
             coordinateGrid[ly + currentPosY][lx + currentPosX] = 'O';
             cout << ' ' << coordinateGrid[x][y] << ' ';
             if(y == 10) {
@@ -24,19 +25,25 @@ void createGrid(int mx = 0, int my = 0) {
 }
 
 
-
+int h = 0;
+int v = 0;
 int main() {
     createGrid();
     while(true) {
-        cout << "\n" << "Type direction to move" << "\n" << ">";
-        string movement;
-        cin >> movement;
-        int h = 0;
-        int v = 0;
-        if(movement == "up"){v = -1;}
-        if(movement == "down"){v = 1;}
-        if(movement == "left"){h = -1;}
-        if(movement == "right"){h = 1;}
+        cout << " Press WASD to move:" << endl;
+            for (int keyCode = 0; keyCode < 256; ++keyCode) {
+                if (GetAsyncKeyState(keyCode) & 0x8000) {
+                    char keyChar = static_cast<char>(keyCode);
+                    if(keyChar == 'W'){h = 0; v = -1;}
+                    if(keyChar == 'S'){h = 0; v = 1;}
+                    if(keyChar == 'A'){v = 0; h = -1;}
+                    if(keyChar == 'D'){v = 0; h = 1;}
+                }
+            }
+
+
+        Sleep(100);
+
         system("cls");
         createGrid(h, v);
     }
