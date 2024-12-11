@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\malth\Downloads\Snake-in-C-\build\CMakeFiles\dd12fc9ff398eff76d177c49a03b6b10\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{410F29DC-ADFD-30F6-B60B-58C53A5D61CA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

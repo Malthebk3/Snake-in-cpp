@@ -1,0 +1,10 @@
+^C:\USERS\MALTH\DOWNLOADS\SNAKE-IN-C-\BUILD\CMAKEFILES\DD12FC9FF398EFF76D177C49A03B6B10\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/malth/Downloads/Snake-in-C- -BC:/Users/malth/Downloads/Snake-in-C-/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/malth/Downloads/Snake-in-C-/build/myproject.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,3 @@
+C:/Users/malth/Downloads/Snake-in-C-/build/CMakeFiles/myprogram.dir
+C:/Users/malth/Downloads/Snake-in-C-/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/malth/Downloads/Snake-in-C-/build/CMakeFiles/ZERO_CHECK.dir
