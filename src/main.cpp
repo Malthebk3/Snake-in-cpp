@@ -5,7 +5,7 @@
 using namespace std;
 
 char coordinateGrid[11][11];
-int mapSize = 10, lx = 5, ly = 5, snakeLenght = 5;
+int mapSize = 10, lx = 5, ly = 5, snakeLenght = 3;
 deque<int> prevPosX = {5, 4, 3, 2, 1}, prevPosY = {5, 5, 5, 5, 5};
 int randAppleSpawnX = rand() % 10;
 int randAppleSpawnY = rand() % 10;
